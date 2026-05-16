@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>三数见势｜高岛断事</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#121933;
+      --text:#eef2ff;
+      --sub:#b7c0ea;
+      --line:#2a3566;
+      --accent:#7c9cff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+      background:linear-gradient(180deg,#0a0f1e,#111937);
+      color:var(--text);
+      line-height:1.7;
+    }
+    .wrap{
+      max-width:960px;
+      margin:0 auto;
+      padding:40px 20px 80px;
+    }
+    .hero,.card{
+      background:rgba(18,25,51,.88);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+      backdrop-filter: blur(8px);
+    }
+    .hero img{
+      max-width:100%;
+      border-radius:12px;
+      display:block;
+      margin-bottom:20px;
+    }
+    h1,h2,h3{
+      margin:0 0 14px;
+    }
+    h1{
+      font-size:36px;
+      line-height:1.2;
+    }
+    h2{
+      font-size:24px;
+      margin-top:30px;
+    }
+    p{
+      margin:0 0 14px;
+      color:var(--sub);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+      margin-top:22px;
+    }
+    .item{
+      background:#0e1530;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+    }
+    ul{
+      margin:0;
+      padding-left:20px;
+      color:var(--sub);
+    }
+    code{
+      background:#0a122b;
+      border:1px solid var(--line);
+      padding:2px 6px;
+      border-radius:8px;
+      color:#d8e0ff;
+    }
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:20px;
+    }
+    .links a{
+      display:inline-block;
+      text-decoration:none;
+      color:white;
+      background:var(--accent);
+      padding:10px 14px;
+      border-radius:12px;
+      font-weight:600;
+    }
+    .section{
+      margin-top:24px;
+    }
+    .footer{
+      margin-top:32px;
+      color:#93a0d8;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <img src="../cover.png" alt="三数见势｜高岛断事">
+      <h1>三数见势｜高岛断事</h1>
+      <p>一个基于“三个数字 + 一个问题”的结构化断事项目。</p>
+      <p>重点不是空谈吉凶，而是通过固定起卦规则，判断事情当前所处阶段、时势变化、关系节奏，以及下一步更适合怎么推进。</p>
+
+      <div class="links">
+        <a href="../README.md">查看 README</a>
+        <a href="../prompt.md">查看 Prompt</a>
+        <a href="../rules.md">查看 Rules</a>
+        <a href="../examples.md">查看 Examples</a>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>使用方式</h2>
+      <p>输入格式：</p>
+      <p><code>三个数字 + 一个问题</code></p>
+      <p>例如：</p>
+      <p><code>3 8 5 我最近要不要换工作？</code></p>
+    </section>
+
+    <section class="section card">
+      <h2>起卦规则</h2>
+      <div class="grid">
+        <div class="item">
+          <h3>上卦</h3>
+          <p>第一个数字决定</p>
+          <p><code>÷ 8 取余，余 0 按 8</code></p>
+        </div>
+        <div class="item">
+          <h3>下卦</h3>
+          <p>第二个数字决定</p>
+          <p><code>÷ 8 取余，余 0 按 8</code></p>
+        </div>
+        <div class="item">
+          <h3>动爻</h3>
+          <p>第三个数字决定</p>
+          <p><code>÷ 6 取余，余 0 按 6</code></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>八卦数对应</h2>
+      <ul>
+        <li>1 = 乾</li>
+        <li>2 = 兑</li>
+        <li>3 = 离</li>
+        <li>4 = 震</li>
+        <li>5 = 巽</li>
+        <li>6 = 坎</li>
+        <li>7 = 艮</li>
+        <li>8 = 坤</li>
+      </ul>
+    </section>
+
+    <section class="section card">
+      <h2>输出结构</h2>
+      <ul>
+        <li>占问</li>
+        <li>起卦</li>
+        <li>卦象判断</li>
+        <li>卦辞原意</li>
+        <li>爻位分析</li>
+        <li>时势判断</li>
+        <li>现实解读</li>
+        <li>行动建议</li>
+        <li>一句断语</li>
+      </ul>
+    </section>
+
+    <section class="section card">
+      <h2>项目特点</h2>
+      <ul>
+        <li>先起卦，再解读</li>
+        <li>先说本卦、动爻、变卦</li>
+        <li>不故弄玄虚，不做绝对预言</li>
+        <li>重点看时势、关系、进退、变化</li>
+        <li>语言必须落到现实问题</li>
+      </ul>
+    </section>
+
+    <section class="section card">
+      <h2>说明</h2>
+      <p>本项目用于文化研究、结构化表达与个人决策参考，不构成法律、医疗、投资等专业意见。</p>
+      <div class="footer">
+        GitHub Repository: guanyu34/san-shu-gaodao
+      </div>
+    </section>
+  </div>
+</body>
+</html>
